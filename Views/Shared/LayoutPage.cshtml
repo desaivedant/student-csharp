@@ -1,0 +1,52 @@
+﻿<html>
+@*--------Header Section Start-------*@
+<head>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+@*--------Header Section End-------*@
+<body>
+
+    @*--------Navigation bar Start-------*@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Student Record</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    @Html.ActionLink("Home", "GetStudents", "Student", null, new { Class = "nav-link" })
+                </li>
+                <li class="nav-item active">
+                    @Html.ActionLink("New Student", "GoToInsert", "Student", null, new { Class = "nav-link" })
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    @*--------Navigation bar End-------*@
+
+    @*-----------------All Views Render here ---------------*@
+
+    @RenderBody();
+
+    @*--------Footer Section Start-------*@
+
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:20MCA015@charusat.edu.org
+        </div>
+    </footer>
+
+    @*--------Footer Section End-------*@
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</hetml>
